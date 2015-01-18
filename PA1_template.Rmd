@@ -21,12 +21,14 @@ The variables included in this dataset are:
 The dataset is stored in a comma-separated-value (CSV) file and there are a total of 17,568 observations in this dataset.
 
 ```{r}
-if(!file.exists("activity.csv")) {
-        temp <- tempfile()
-        download.file("https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip",temp)
-        unzip(temp)
-        unlink(temp)
-}
+#In the repository is the activity.zip file. Then I'll comment this code and I'll use other easier.
+#if(!file.exists("activity.csv")) {
+#        temp <- tempfile()
+#        download.file("https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip",temp)
+#        unzip(temp)
+#        unlink(temp)
+#}
+unzip("activity.zip")
 activity <- read.csv("activity.csv")
 ```
 
