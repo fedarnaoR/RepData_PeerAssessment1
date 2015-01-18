@@ -1,6 +1,6 @@
 ---
 title: 'Reproducible Research: Peer Assessment 1'
-author: "Federico M. Arnao Mart√≠n"
+author: "Federico M. Arnao Marti≠n"
 date: "Friday, January 16, 2015"
 output: html_document
 keep_md: yes
