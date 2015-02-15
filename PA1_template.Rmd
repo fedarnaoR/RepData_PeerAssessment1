@@ -36,15 +36,21 @@ activity <- read.csv("activity.csv")
 
 For this part of the assignment, you can ignore the missing values in the dataset.
 
-1. Make a histogram of the total number of steps taken each day.
+1. Calculate the total number of steps taken per day
 
-    ```{r histograma}
+    ```{r total_num_steps}
     steps_by.day <- aggregate(steps ~ date, data=activity, FUN=sum)
+    head(steps_by.day)
+    ```
+
+2. Make a histogram of the total number of steps taken each day.
+
+    ```{r histogram}
     hist(steps_by.day$steps, main="Total number of steps taken per day", col="cadetblue4",
       xlab="Number of steps", xlim=c(0,25000), ylim=c(0,30), labels=TRUE)
     ```
 
-2. Calculate and report the **mean** and **median** total number of steps taken per day.
+3. Calculate and report the **mean** and **median** total number of steps taken per day.
     ```{r calc_mean_median}
     rmean <- mean(steps_by.day$steps)
     rmedian <- median(steps_by.day$steps)
